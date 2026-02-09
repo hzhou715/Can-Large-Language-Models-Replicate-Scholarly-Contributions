@@ -15,13 +15,12 @@ Build America Center
 
 ## 1. Project overview
 
-This project investigates the use of supervised learning to assess streetscape quality related to pedestrian crashes. By leveraging Google Street View images, AI-based automated labeling and Vertex AI's Auto Machine Learning, the project aims to evaluate streetscape quality at scale.
+This study aimed to explores how much Large Language Models(LLMs) can replicate human scholarly work. Accordingly, the study had the following questions: i) To what extent can LLMs reproduce the quality of human literature reviews? ii) Which types of contributions—theoretical, methodological, conceptual, or managerial—are most and least replicable? iii) What implications arise for the future of scholarly knowledge contribution in the AI era?
 
-Supervised learning in this context involves training a model using pseudo-labeled data (generated via ChatGPT 4.1), followed by fine-tuning using a smaller set of manually labeled ground truth data. This approach allows the model to learn visual features with minimal human annotation, improving scalability and efficiency.
 
 ---
 
-## 2. Data and methodology
+## 2. Methodology
 
 ### 2.1 Data sources
 
@@ -45,6 +44,8 @@ The analytical process includes the following key steps:
 
 4. **Evaluate**  
    Model performance is assessed using average precision, precision, and recall across the confidence threshold of 0.5.
+
+
 
 ---
 
