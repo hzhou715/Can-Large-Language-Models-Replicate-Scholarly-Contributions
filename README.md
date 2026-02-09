@@ -15,7 +15,7 @@ Build America Center
 
 ## 1. Project overview
 
-This study aimed to explores how much Large Language Models(LLMs) can replicate human scholarly work. Accordingly, the study had the following questions: i) To what extent can LLMs reproduce the quality of human literature reviews? ii) Which types of contributions—theoretical, methodological, conceptual, or managerial—are most and least replicable? iii) What implications arise for the future of scholarly knowledge contribution in the AI era?
+This study aimed to explores how much Large Language Models(LLMs) can replicate human scholarly work. Accordingly, the study had three questions: i) To what extent can LLMs reproduce the quality of human literature reviews? ii) Which types of contributions—theoretical, methodological, conceptual, or managerial—are most and least replicable? iii) What implications arise for the future of scholarly knowledge contribution in the AI era?
 
 
 ---
