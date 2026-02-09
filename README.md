@@ -1,16 +1,15 @@
-# Assessing Streetscape Quality Related to Pedestrian Crashes Using Supervised Learning
+# Can Large Language Models Replicate Scholarly Contributions?
 
-**Course:** URSP688Y
-**Term:** Spring 2025  
+**Conference:**  ICCCBE2026
 
 **Author:**  
 Huan Zhou  
 [hzhou715@umd.edu](mailto:hzhou715@umd.edu)
 
-**Instructor:**  
-Dr. Chester Harvey  
-National Center for Smart Growth  
-[cwharvey@umd.edu](mailto:cwharvey@umd.edu)
+**Corresponding Author:**  
+Dr. Qingbin Cui  
+Build America Center  
+[cui@umd.edu](mailto:cui@umd.edu)
 
 ---
 
