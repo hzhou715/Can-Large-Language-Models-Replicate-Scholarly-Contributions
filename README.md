@@ -20,102 +20,153 @@ This study aimed to explores how much Large Language Models(LLMs) can replicate 
 
 ---
 
-## 2. Methodology
+### 1. Paper Selection
 
-### 2.1 Data sources
-
-- **Street View Images:** 1,300 images from Baltimore City, collected via the Google Maps Street View API.
-- **Train/Validation Set:** 1,100 pseudo-labeled images (using ChatGPT 4.1), split 10/1 for training and validation.
-- **Test Set:** 100 manually annotated images, used for final model evaluation.
-
-### 2.2 Methods
-
-The analytical process includes the following key steps:
-
-1. **Download street view images**  
-   Downloading street view image using the Google Maps API, focusing on areas with high pedestrian crash rates in Baltimore City.
-
-2. **Label street view images**  
-   - Pseudo-labeling for training using ChatGPT-based automation  
-   - Manual annotation for test images to ensure high-quality ground truth
-
-3. **Train the model**  
-   A supervised model is pretrained using pseudo-labeled data, and then fine-tuned on ground truth labels using Vertex AI’s AutoML platform for multi-label classification.
-
-4. **Evaluate**  
-   Model performance is assessed using average precision, precision, and recall across the confidence threshold of 0.5.
-
-
+- **Corpus size**: 30 accepted literature review papers  
+- **Journals**:
+  - *International Journal of Project Management (IJPM)*
+  - *Project Management Journal (PMJ)*
+- **Timeframe**: 2022–present  
+- **Selection criteria**:
+  - Clearly stated research problems  
+  - Complete IMRaD structure  
+  - Restricted access to AI
 
 ---
 
-## 3. Results
+### 2. Prompt Design and Optimization
 
-### Overall performance
+To maintain parity between human and AI outputs, standardized prompts were developed.
 
-- **Average Precision (AuPRC):** 0.687  
-- **Precision:** 68.5%  
-- **Recall:** 67.4%
-- **Confidence threshold:** 0.5
+- **Variables**:
+  - Research topic  
+  - Research problem  
+  - Scope and timeframe 
 
-### Per-Label precision scores
+Three prompt types were used:
+1. Research topic + research problem  
+2. Research topic + research problem + method  
+3. Research topic + research problem + context  
 
-| Label                                 | Precision |
-|--------------------------------------|-----------|
-| presence_of_sidewalk_no              | 1.000     |
-| presence_of_sidewalk_yes             | 1.000     |
-| crosswalk_presence_no                | 0.919     |
-| crosswalk_presence_yes               | 0.796     |
-| presence_of_sidewalk_buffer_zone_yes | 0.787     |
-| traffic_signs_yes                    | 0.760     |
-| traffic_signs_no                     | 0.759     |
-| streetlight_presence_yes             | 0.708     |
-| sidewalk_condition_good              | 0.662     |
-| streetlight_presence_no              | 0.638     |
-| presence_of_sidewalk_buffer_zone_no  | 0.548     |
-| road_pavement_condition_good         | 0.438     |
-| road_pavement_condition_fair         | 0.406     |
-| sidewalk_condition_poor              | 0.376     |
-| road_pavement_condition_poor         | 0.346     |
-| sidewalk_condition_fair              | 0.310     |
-
-The model performs well in identifying visible features (e.g., sidewalks, crosswalks), but shows lower performance for subjective conditions (e.g., road pavement quality). These findings support the potential of automated image analysis for infrastructure screening while highlighting the need for human oversight in complex or subjective assessments.
+Prompts were refined using GPT-5 to minimize stylistic artifacts and isolate intellectual generation capacity.
 
 ---
-## 4. Theoretical strengths and weeknesses
 
-This study demonstrates the strengths of using AI for scalable, objective assessment of streetscape quality. By using street view imagery and Auto Machine Learning, public agencies can efficiently identify infrastructure disparities, such as missing sidewalks or absent crosswalks. In this way, data science offers a method to detect and prioritize low-quality environments that may affect underserved communities. This aligns with the goals of environment justice, where the quality of the built environment should not determine one’s risk exposure.
+### 3. AI-Assisted Replication
 
-However, limitations arise from both the models and data. The model performs well in detecting visible infrastructure but struggles with subjective assessments such as pavement or sidewalk condition. It cannot capture condition-based inequities. Moreover, the dataset is biased. Street view images coverage is more frequent in downtown, while underserved neighborhoods or rural areas may have outdated or no images. The places most in need of investment may be least represented in the training data.
+- **Models used**:
+  - GPT-5  
+  - Gemini-3-Pro (preview)
+- **Output length**: ~8,000 words per paper  
+- **GPT-5 settings**:
+  - Reasoning effort: low  
+  - Verbosity: high  
 
-In summary, while AI enables large scale audits of streetscape quality, it lacks human insight and sufficient representation of vulnerable areas. Future work should integrate community cooperation and diverse datasets to ensure smart city tools improve rather than undermine urban equity.
+A total of **30 AI-generated literature reviews** were produced to match a subset of the human-authored corpus.
+
+---
+
+### 4. Quality Evaluation
+
+Literature review quality was evaluated using **Snyder’s (2019) criteria**, covering seven dimensions:
+
+1. Clarity of research questions  
+2. Transparency of search strategies  
+3. Justification of inclusion/exclusion criteria  
+4. Use of quality assessment measures  
+5. Reliability checks (e.g., inter-coder validation)  
+6. Transparency of synthesis process  
+7. Articulation of future research directions  
+
+Each criterion was scored as:
+- `0` = Not met  
+- `1` = Partially met  
+- `2` = Fully met  
+
+Evaluation was conducted by an independent AI evaluator (Claude) using a strictly defined rubric.
+
+---
+
+### 5. Knowledge Contribution Evaluation
+
+A pairwise comparison was conducted between:
+- Human-authored reviews  
+- GPT-generated reviews  
+- Gemini-generated reviews  
+
+Six dimensions of scholarly contribution were assessed:
+
+1. Conceptual contribution  
+2. Theoretical contribution  
+3. Methodological contribution  
+4. Empirical contribution  
+5. Practical / managerial contribution  
+6. Research agenda contribution  
+
+Scores were assigned using a structured evaluation framework to ensure consistency.
+
+---
+
+## Results
+
+### Quality Evaluation Results
+
+- AI-generated and human-authored reviews achieved **comparable performance** in:
+  - Search transparency  
+  - Synthesis transparency  
+  - Structural clarity  
+
+- Human-authored reviews **significantly outperformed AI-generated reviews** in:
+  - Quality assessment procedures  
+  - Reliability and validation checks  
+  - Justification of inclusion/exclusion criteria  
+
+AI-generated reviews often described rigorous procedures without actually performing them, revealing a gap between procedural language and substantive execution.
+
+---
+
+### Knowledge Contribution Results
+
+#### 1. Empirical and Methodological Contributions
+
+- Human-authored reviews demonstrated strong empirical grounding through meta-analyses, bibliometric mapping, and structured coding.
+- AI-generated reviews showed minimal empirical contribution and relied on inferred or non-verifiable data.
+
+#### 2. Theoretical Integration
+
+- AI effectively summarized existing theories and conceptual linkages.
+- Human-authored reviews advanced theory by identifying mechanisms, tensions, and cross-disciplinary integration.
+
+#### 3. Conceptual, Synthesis, and Managerial Contributions
+
+- AI-generated reviews performed comparably in:
+  - Conceptual framing  
+  - Narrative synthesis  
+  - Managerial implications  
+
+However, AI outputs tended to remain generic and idealized, while human authors contextualized implications within real organizational and institutional constraints.
+
+---
+
+## Key Takeaways
+
+- LLMs can replicate the **structure and language** of scholarly literature reviews.
+- Human researchers maintain a clear advantage in:
+  - Empirical validation  
+  - Methodological rigor  
+  - Theory building  
+  - Reflexive judgment  
+- AI currently functions best as a **research accelerator**, not a replacement for scholarly knowledge creation.
+
+---
+
+## Citation
+
+If you use this repository or its materials, please cite:
+
+> Cui, Q., & Zhou, H. (2026). *Can Large Language Models Replicate Scholarly Contributions?*
 
 
-## 5. Project structure and file descriptions
-
-The project is organized into three primary stages: downloading street view images, labeling, and training the model. Each stage is organized in its own folder, along with supporting code and datasets.
-
-```
-├── 1_download_street_view/                 # Scripts and files for acquiring street view images  
-│   ├── 100point_network_test.csv           # Coordinates of sample points along road network  
-│   ├── 100points_panoid_results.csv        # Panoid results matched to sample points  
-│   ├── panoid_unique_latest_date.csv       # Cleaned list of unique panoids with latest dates  
-│   ├── panoid_unique_latest_date.py        # Script for extracting latest panoid per sample point  
-│   └── download_gsv.py                     # Code to download images using Google Street View API  
-│
-├── 2_label_street_view/                    # Labeling process (ChatGPT-based and manual)  
-│   └── chatgpt_label.py                    # Script to auto-label images using ChatGPT  
-│
-├── 3_train_model/                          # Image data prepared for training in Vertex AI  
-│   ├── train_dataset_sample/               # Folder of training images (pseudo-labeled) 
-│   ├── test_dataset_sample/                # Folder of test images (ground truth)  
-│   ├── train_labels_chatgpt41.csv          # Pseudo-labels generated for training  
-│   └── test_labels_ground_truth.csv        # Manually labeled ground truth for test  
-│
-├── method_explanation.ipynb                # Main notebook explaining project methodology  
-├── Narrative.pdf                           # Final narrative report for the project  
-└── README.md                               # Finalized project README  
-```
 
 
 
