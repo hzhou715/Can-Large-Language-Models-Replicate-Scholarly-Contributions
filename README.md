@@ -19,8 +19,8 @@ This study aimed to explores how much Large Language Models(LLMs) can replicate 
 
 
 ---
-
-### 1. Paper Selection
+## 2. Methodolody
+### 2.1. Paper Selection
 
 - **Corpus size**: 30 accepted literature review papers  
 - **Journals**:
@@ -34,7 +34,7 @@ This study aimed to explores how much Large Language Models(LLMs) can replicate 
 
 ---
 
-### 2. Prompt Design and Optimization
+### 2.2. Prompt Design and Optimization
 
 To maintain parity between human and AI outputs, standardized prompts were developed.
 
@@ -52,7 +52,7 @@ Prompts were refined using GPT-5 to minimize stylistic artifacts and isolate int
 
 ---
 
-### 3. AI-Assisted Replication
+### 2.3. AI-Assisted Replication
 
 - **Models used**:
   - GPT-5  
@@ -66,7 +66,7 @@ A total of **30 AI-generated literature reviews** were produced to match a subse
 
 ---
 
-### 4. Quality Evaluation
+### 2.4. Quality Evaluation
 
 Literature review quality was evaluated using **Snyder’s (2019) criteria**, covering seven dimensions:
 
@@ -87,7 +87,7 @@ Evaluation was conducted by an independent AI evaluator (Claude) using a strictl
 
 ---
 
-### 5. Knowledge Contribution Evaluation
+### 2.5. Knowledge Contribution Evaluation
 
 A pairwise comparison was conducted between:
 - Human-authored reviews  
