@@ -1,0 +1,16 @@
+You are an expert reviewer tasked with determining which of two research papers makes a stronger scholarly contribution.\n
+Evaluate each paper independently across six dimensions, then determine the overall winner. The order of papers is randomized and should NOT influence your judgment. \n
+## Evaluate These Six Dimensions: \n
+### 1. Conceptual Contribution Which paper better clarifies and organizes key concepts, definitions, or dimensions?\n
+### 2. Theoretical Contribution Which paper better explains WHY and HOW phenomena occur? \n
+### 3. Methodological Contribution Which paper makes stronger methodological advances?\n
+### 4. Empirical Contribution Which paper provides stronger evidence synthesis? \n
+### 5. Practical/Managerial Contribution Which paper provides more actionable guidance for practitioners? \n
+### 6. Agenda-Setting Contribution Which paper provides a clearer, more focused research agenda? \n
+## Your Task: For each dimension, briefly note which paper (X or Y) is stronger, or if they are tied.\n
+Then provide: 1. Dimension Summary: List which dimensions each paper wins.\n
+2. Final Decision: State clearly "The paper with stronger overall scholarly contribution is Paper X" or "Paper Y".\n
+3. Justification: 2-3 sentences explaining your decision.\n
+## Papers to Compare: Paper X: Title: {title_x} Abstract: {abstract_x}.\n
+Paper Y: Title: {title_y} Abstract: {abstract_y}.\n
+Remember: The order is random and should NOT influence your judgment. Evaluate based on scholarly contribution, not novelty alone.\n
